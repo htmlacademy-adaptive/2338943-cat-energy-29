@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Кэт энерджи. Главная</title>
+  <title>Кэт энерджи. Форма заказа</title>
 </head>
 <body class="page">
   <header class="page__header page-header--mobile">
@@ -34,29 +34,39 @@
     </nav>
   </header>
   <main>
-    <h1 class="section__title">Каталог продукции</h1>
-    <section class="main__section main-products">
-      <h2 class="visually-hidden">Основные продукты.</h2>
-      <ul class="products-list">
-        <li class="products__item">
-          <img class="products-list__picture" src="img/catalog/catalog-1.jpg" alt="Фото нашего продукта.">
-          <div class="products-list__text">
-            <h3 class="product-list__title product-title product-title--mobile">Cat Energy PRO 500 г</h3>
-            <dl>
-              <dt>Масса</dt>
-              <dd>500 г.</dd>
-              <dt>Вкус</dt>
-              <dd>Курица</dd>
-              <dt>Цена</dt>
-              <dd>700 ₽</dd>
-            </dl>
-          </div>
-          <a class="products__item button-order" href="form.html">Заказать</a>
-        </li>
-      </ul>
-    </section>
-    <section class="main__section additional-products">
-      <h2 class=""></h2>
+    <h1 class="section__title">Подбор программы</h1>
+    <section class="main__section">
+      <h2 class="section__title">Заполните анкету, и мы подберём программу питания для вашего кота</h2>
+      <form class="form-order" action="#" method="post">
+        <fieldset>
+          <label >Имя:*<input type="text" placeholder="Барсик"></label>
+          <label >Вес (кг):*<input type="number" placeholder="7"></label>
+          <label >Возраст (лет):<input type="number" placeholder="7"></label>
+        </fieldset>
+        <fieldset>
+          <label><input type="radio">Похудение</label>
+          <label><input type="radio">Набор массы</label>
+          <label><input type="radio">Не знаю (нужен ваш совет)</label>
+        </fieldset>
+        <fieldset>
+          <legend>Контактные данные (владельца кота)</legend>
+          <label>E-mail:* <input type="email" placeholder="kuklachev@gmail.com"></label>
+          <label>Телефон:* <input type="email" placeholder="8 (960) 900-60-90"></label>
+        </fieldset>
+        <fieldset>
+          <legend>Комментарий</legend>
+          <textarea name="comment" id="comment" cols="30" rows="10">Расскажите обо всех повадках кота</textarea>
+        </fieldset>
+        <fieldset>
+          <legend>Дополнительно</legend>
+          <label><input type="checkbox">Сахарозаменитель</label>
+          <label><input type="checkbox">Питьевая вода</label>
+          <label><input type="checkbox">Молоко</label>
+          <label><input type="checkbox">Витамины</label>
+        </fieldset>
+        <input class="form-order__button" type="submit">
+        <p class="form-footnote">* - Обязательные поля</p>
+      </form>
     </section>
     <section class="main__section section-address section-address--catalog">
       <header class="section-address__header address-header">
