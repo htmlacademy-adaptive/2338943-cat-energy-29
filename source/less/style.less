@@ -1,1 +1,49 @@
-// Начните писать стили здесь
+.page {
+  font-family: Oswald;
+  min-width: 320px;
+  background-color: #ffffff;
+  margin: 0;
+}
+
+@import "./blocks/page-header.less";
+@import "./blocks/navigation.less";
+@import "./blocks/button.less";
+
+.main__section {
+  &--mobile {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+@import "./blocks/section-hero.less";
+@import "./blocks/banner-program.less";
+@import "./blocks/section-title.less";
+@import "./blocks/section-text.less";
+
+.section-address__map {
+  margin: 0 -20px;
+  height: 362px;
+  width: 320px;
+  background-image: url(../img/map.jpg);
+}
+
+@import "./blocks/products-list.less";
+@import "./blocks/products-card.less";
+
+.visually-hidden {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+
+  white-space: nowrap;
+
+  border: 0;
+
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}

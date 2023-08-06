@@ -1,0 +1,52 @@
+.button-style(@_) {
+  border: 0;
+  padding: 0;
+}
+
+.button-style(menu) {
+  width: 24px;
+  height: 24px;
+  background: url('../img/button-menu-close.svg') no-repeat;
+  background-position: center;
+  background-color: transparent;
+}
+
+.button-style(link, @background-color, @text-color) {
+  display: block;
+  min-height: 20px;
+  padding: 10px;
+
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  word-break: break-all;
+
+  background-color: @background-color;
+  color: @text-color;
+}
+
+.button {
+
+  &-menu--close {
+    .button-style(menu);
+  }
+
+  &-menu--opened {
+    .button-style(menu);
+    background-image: url('../img/button-menu-opened.svg');
+  }
+
+  &-link {
+    .button-style(link, #68B738, #ffffff);
+  }
+
+  &-link-program {
+    .button-style(link, transparent, #000000);
+    padding: 0;
+    text-align: left;
+  }
+
+  &-more {
+    .button-style(link, #F2F2F2, #000000);
+  }
+}
