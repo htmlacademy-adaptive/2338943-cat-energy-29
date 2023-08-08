@@ -1,35 +1,57 @@
 .page {
-  font-family: Oswald;
+  font-family: Oswald, sans-serif;
+  font-size: 16px;
+  line-height: 24px;
   min-width: 320px;
+  max-width: 1440px;
+  margin: 0 auto;
+
+  @media (max-width: 767px) {
+    font-size: 14px;
+  }
+
   background-color: #ffffff;
-  margin: 0;
 }
 
-@import "./blocks/page-header.less";
-@import "./blocks/navigation.less";
-@import "./blocks/button.less";
-
 .main__section {
-  &--mobile {
-    padding-left: 20px;
-    padding-right: 20px;
+
+  @media (max-width: 767px) {
+    padding: 0 20px;
+
+    &--programs {
+      margin: 20px 0;
+    }
+  }
+
+  @media (min-width: 1440px) {
+    padding: 0 110px;
+    max-width: 1440px;
+    box-sizing: border-box;
+
+    &--programs {
+      margin: 80px 0 70px;
+    }
   }
 }
 
-@import "./blocks/section-hero.less";
-@import "./blocks/banner-program.less";
+@import "./blocks/button.less";
 @import "./blocks/section-title.less";
 @import "./blocks/section-text.less";
 
-.section-address__map {
-  margin: 0 -20px;
-  height: 362px;
-  width: 320px;
-  background-image: url(../img/map.jpg);
-}
+@import "./blocks/page-header.less";
+@import "./blocks/section-hero.less";
+@import "./blocks/section-programs.less";
+@import "./blocks/banner-program.less";
+@import "./blocks/section-advantages.less";
+@import "./blocks/section-slider.less";
 
+@import "./blocks/section-address.less";
 @import "./blocks/products-list.less";
 @import "./blocks/products-card.less";
+@import "./blocks/page-footer.less";
+
+
+
 
 .visually-hidden {
   position: absolute;

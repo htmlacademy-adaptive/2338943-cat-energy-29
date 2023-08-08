@@ -2,24 +2,43 @@
   font-size: 60px;
   line-height: 60px;
   font-weight: 400;
+  overflow-wrap: break-word;
   margin: 0;
 
-  &--mobile {
+  .font(@f-size, @l-height, @color) {
+    font-size: @f-size;
+    line-height: @l-height;
+    color: @color;
+    overflow-wrap: break-word;
+  }
 
-    .font() {
-      font-size: 36px;
-      line-height: 36px;
-      overflow-wrap: break-word;
-    }
+  &--base {
+    .font(36px, 36px, #000000);
+  }
 
-    &_base {
-      .font();
-    }
+  &--hero {
+    width: 414px;
+    .font(60px, 60px, #000000);
+    padding: 30px 0;
 
-    &_hero {
-      .font();
+    @media (max-width: 767px) {
+      .font(36px, 36px, #ffffff);
       text-align: center;
-      color: #ffffff;
+      width: 280px;
+      margin: 0 auto;
+      padding: 7px 0 5px;
     }
+  }
+
+  &--program {
+    .font(24px, 37px, #000000 );
+    padding-top: 10px;
+    padding-bottom: 19px;
+  }
+
+  &--slider {
+    .font(36px, 40px, #000000);
+    margin: 0;
+    padding: 0 0 40px;
   }
 }

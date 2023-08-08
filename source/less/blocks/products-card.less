@@ -3,13 +3,16 @@
   flex-direction: column;
   justify-content: space-between;
 
-  &--mobile {
+  @media (max-width: 767px) {
     min-width: 280px;
     padding: 11px 20px 14px;
+
+    &--additional {
+      width: 100%;
+    }
   }
-  &--additional {
-    width: 100%;
-  }
+
+
 }
 
 .products-card__info {

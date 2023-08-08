@@ -1,9 +1,49 @@
 .section-hero {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
 
-  &--mobile {
-    background: url('../img/hero-background.png') no-repeat;
+  @media (max-width: 767px) {
+    background:
+      url("../img/hero-background.png"),
+      linear-gradient(to right, #68B738 0, #5e9e36 50%,#5a9933 50%, #68B738 100%);
+    background-size:
+      320px 302px,
+      767px 302px;
+    background-repeat: no-repeat;
     background-position: center top;
-    background-size: contain;
-    padding-top: 27px;
+
+    padding-top: 20px;
   }
+
+
+  @media (min-width: 1440px) {
+    min-height: 550px;
+    padding-left: 190px;
+
+    &::after {
+
+      position: absolute;
+      top: -143px;
+      right: 0;
+      box-sizing: border-box;
+      height: 694px;
+      width: 720px;
+      content: "";
+      z-index: -1;
+      background:
+        url("../img/hero-background-desktop.jpg") no-repeat;
+    }
+  }
+}
+
+.hero__product-picture {
+  @media (min-width: 1440px) {
+    position: absolute;
+    width: 552px;
+    height: 499px;
+  }
+
+  align-self: center;
 }

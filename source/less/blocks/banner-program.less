@@ -1,8 +1,14 @@
 .banner-program {
-  padding: 20px;
+  box-sizing: border-box;
+  padding: 50px;
   background-color: #F2F2F2;
-}
+  max-width: 708px;
 
-.banner-program__title {
-  text-transform: uppercase;
+  @media (max-width: 767px) {
+    padding: 20px;
+  }
+
+  @media (min-width: 1440px) {
+    width: 570px;
+  }
 }
