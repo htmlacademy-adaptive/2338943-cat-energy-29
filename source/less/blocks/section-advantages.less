@@ -1,0 +1,54 @@
+.section-advantages {
+
+}
+
+.advantages__list {
+  display: flex;
+  flex-wrap: wrap;
+
+  margin: 0;
+  list-style: none;
+
+  @media (max-width: 767px) {
+    padding: 40px 0 25px;
+  }
+}
+
+.advantages__item {
+  position: relative;
+  box-sizing: border-box;
+  width: 280px;
+  min-height: 60px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  padding: 0 10px 0 80px;
+}
+
+.advantages__item--icon {
+
+  .icon-set(@url) {
+    position: absolute;
+    left: 0;
+    width: 60px;
+    height: 60px;
+    background: url(@url) no-repeat;
+    background-size: cover;
+    content: "";
+  }
+
+  &_healthy::before {
+    .icon-set("../img/advantage-icon_healthy.svg");
+  }
+
+  &_cooking::before {
+    .icon-set("../img/advantage-icon_cooking.svg");
+  }
+
+  &_substitute::before {
+    .icon-set("../img/advantage-icon_substitute.svg");
+  }
+
+  &_rapidity::before {
+    .icon-set("../img/advantage-icon_rapidity.svg");
+  }
+}
