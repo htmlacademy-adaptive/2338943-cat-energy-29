@@ -1,26 +1,38 @@
+@section-padding: 10px;
+
 .section-address {
 
 }
 
 .section-address__header {
   display: flex;
+  justify-content: center;
   min-width: 280px;
   margin: auto;
-  padding: 24px 0 26px;
+  padding: 24px 20px 26px;
 }
 
 .section-address__title {
   font-size: 16px;
   line-height: 20px;
   text-transform: uppercase;
-  width: 50%;
   margin: 0;
   padding-top: 2px;
+  padding-right: 17px;
 }
 
 .section-address__map {
-  margin: 0 -20px;
-  min-height: 362px;
-  background: url("../img/map.jpg") no-repeat;
-  background-size: cover;
+  display: block;
+  width: 100%;
+  min-width: 320px;
+  max-width: 1440px;
+  height: 362px;
+
+  @media (min-width: 768px) {
+    height: 400px;
+  }
+
+  @media (min-width: 1440px) {
+
+  }
 }

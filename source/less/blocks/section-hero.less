@@ -13,37 +13,34 @@
       767px 302px;
     background-repeat: no-repeat;
     background-position: center top;
-
     padding-top: 20px;
   }
 
+  @media (min-width: 768px) and (max-width: 1439px) {
+    min-height: 862px;
+    padding-left: 120px;
+  }
 
   @media (min-width: 1440px) {
     min-height: 550px;
     padding-left: 190px;
-
-    &::after {
-
-      position: absolute;
-      top: -143px;
-      right: 0;
-      box-sizing: border-box;
-      height: 694px;
-      width: 720px;
-      content: "";
-      z-index: -1;
-      background:
-        url("../img/hero-background-desktop.jpg") no-repeat;
-    }
   }
 }
 
 .hero__product-picture {
+  align-self: center;
+
+  @media (min-width: 768px) and (max-width: 1439px) {
+    position: absolute;
+    width: 709px;
+    height: 609px;
+    bottom: 0;
+    z-index: -1;
+  }
+
   @media (min-width: 1440px) {
     position: absolute;
     width: 552px;
     height: 499px;
   }
-
-  align-self: center;
 }

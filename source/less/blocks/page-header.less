@@ -4,8 +4,7 @@
   max-width: 1440px;
 
   display: grid;
-  align-items: center;
-
+  align-items: start;
 
   @media (max-width: 767px) {
     grid-template-columns: 33px 1fr 24px;
@@ -16,7 +15,7 @@
   padding: 25px 30px;
 
   @media (min-width: 1440px) {
-    grid-template-columns: 70px 1fr 475px;
+    grid-template-columns: 70px 1fr 570px;
     padding: 55px 110px 29px;
   }
 }
@@ -34,6 +33,7 @@
 .page-header__title {
   grid-column: 2 / 3;
   grid-row: 1 / 2;
+  padding-top: 10px;
 
   @media (max-width: 767px) {
     grid-column: 2 / 3;
