@@ -10,7 +10,6 @@
     display: block;
     width: 24px;
     height: 24px;
-    margin: auto;
     background-repeat:  no-repeat;
     background-position: center;
     background-color: transparent;
@@ -27,10 +26,10 @@
     padding: 7px 44px;
   }
 
-  width: 244px;
-  min-height: 54px;
   padding: 14px 26px;
+  border: none;
 
+  font-family: inherit;
   text-align: center;
   text-transform: uppercase;
   text-decoration: none;
@@ -56,7 +55,12 @@
     .button-style(link, #68B738, #ffffff);
   }
 
-  &-link--nav {
+  &-link--hero {
+    .button-style(link, #68B738, #ffffff);
+    width: 244px;
+  }
+
+  &-nav {
 
     @media (max-width: 767px) {
       .button-style(link, #ffffff, #000000);
@@ -67,14 +71,19 @@
       border-bottom: 1px solid #E6E6E6;
     }
 
-    // ЗДЕСЬ СТИЛЬ ПО-УМОЛЧАНИЮ ДЛЯ ТАБЛЕТ
+    @media (min-width: 768px) and (max-width: 1439px) {
+      .button-style(link, transparent, #000000);
+      padding: 0;
+      width: auto;
+      min-height: unset;
+    }
 
     @media (min-width: 1440px) {
       // ЗДЕСЬ СТИЛЬ ДЛЯ ДЕСКТОПА
       .button-style(link, transparent, #ffffff);
       width: auto;
       max-width: 175px;
-      min-height: 40px;
+      min-height: unset;
       padding: 0;
     }
   }
