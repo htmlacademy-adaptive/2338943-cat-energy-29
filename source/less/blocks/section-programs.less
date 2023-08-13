@@ -1,11 +1,19 @@
 .section-programs {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   max-width: 1440px;
   gap: 80px;
 
   @media (max-width: 767px) {
-    flex-direction: column;
     gap: 20px;
+  }
+
+  @media (min-width: 767px) and (max-width: 1439px) {
+    gap: 30px;
+  }
+
+  @media (min-width: 1440px) {
+    flex-direction: row;
+    flex-wrap: wrap;
   }
 }

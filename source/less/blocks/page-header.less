@@ -1,68 +1,77 @@
 .page-header {
-  position: relative;
-  box-sizing: border-box;
-  max-width: 1440px;
+  .p-header-style(@grid-template-columns, @padding) {
+    position: relative;
+    box-sizing: border-box;
+    min-width: 320px;
+    max-width: 1440px;
+    display: grid;
+    align-items: start;
 
-  display: grid;
-  align-items: center;
-
+    grid-template-columns: @grid-template-columns;
+    padding: @padding;
+  }
 
   @media (max-width: 767px) {
-    grid-template-columns: 33px 1fr 24px;
-    padding: 13px 20px;
+    .p-header-style(33px 1fr 24px, 13px 20px);
   }
 
-  grid-template-columns: 60px 1fr 436px;
-  padding: 25px 30px;
+  @media (min-width: 768px) and (max-width: 1439px) {
+    .p-header-style(60px 1fr 436px, 25px 30px);
+  }
 
   @media (min-width: 1440px) {
-    grid-template-columns: 70px 1fr 475px;
-    padding: 55px 110px 29px;
+    .p-header-style(70px 1fr 570px, 55px 110px 29px);
   }
+}
+
+.grid-position(@grid-column, @grid-row) {
+  grid-column: @grid-column;
+  grid-row: @grid-row;
 }
 
 .page-header__button-menu {
-  grid-column: 3 / -1;
-  grid-row: 1 / 2;
+  .grid-position(3 / -1, 1 / 2);
 }
 
 .page-header__logo {
-  grid-column: 1 / 2;
-  grid-row: 1 / 2;
+  .grid-position(1 / 2, 1 / 2);
 }
 
 .page-header__title {
-  grid-column: 2 / 3;
-  grid-row: 1 / 2;
+  .grid-position(2 / 3, 1 / 2);
+  padding-top: 10px;
 
   @media (max-width: 767px) {
-    grid-column: 2 / 3;
+    .grid-position(2 / 3, 1 / 2);
     margin: 0 auto;
     padding: 10px;
   }
 }
 
 .page-header__nav {
+  .menu-style(@display, @f-size, @l-height, @gap) {
+    display: @display;
+    font-size: @f-size;
+    line-height: @l-height;
+    gap: @gap;
+    flex-wrap: wrap;
+  }
 
   @media (max-width: 767px) {
+    .menu-style(none, 20px, 20px, 0);
     position: absolute;
-    font-size: 20px;
-    line-height: 46px;
-    display: none; //display: block;
+    width: 100%;
     top: 64px;
     left: 0;
-    width: 100%;
     z-index: 1;
   }
 
-  display: flex;
-  gap: 33px;
-  flex-wrap: wrap;
-  font-size: 18px;
+  @media (min-width: 768px) and (max-width: 1439px) {
+    .menu-style(flex, 18px, 24px, 33px);
+  }
 
   @media (min-width: 1440px) {
-    font-size: 20px;
-    line-height: 24px;
+    .menu-style(flex, 20px, 24px, 33px);
     justify-content: end;
   }
 }

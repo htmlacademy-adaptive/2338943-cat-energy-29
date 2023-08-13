@@ -1,45 +1,20 @@
-.button-style(@_) {
-  border: 0;
-  padding: 0;
-}
-
-.button-style(menu) {
-  display: none;
-
-  @media (max-width: 767px) {
-    display: block;
-    width: 24px;
-    height: 24px;
-    background-repeat:  no-repeat;
-    background-position: center;
-    background-color: transparent;
-  }
-}
-
-.button-style(link, @background-color, @text-color) {
-  display: block;
-  box-sizing: border-box;
-
-  @media (max-width: 767px) {
-    width: 100%;
-    min-height: 40px;
-    padding: 7px 44px;
-  }
-
-  padding: 14px 26px;
-  border: none;
-
-  font-family: inherit;
-  text-align: center;
-  text-transform: uppercase;
-  text-decoration: none;
-  word-break: break-all;
-
-  background-color: @background-color;
-  color: @text-color;
-}
-
 .button {
+
+  .button-style(menu) {
+    display: none;
+
+    @media (max-width: 767px) {
+      display: block;
+      align-self: center;
+      width: 24px;
+      height: 24px;
+      padding: 0;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-color: transparent;
+      border: 0;
+    }
+  }
 
   &-menu--close {
     .button-style(menu);
@@ -48,48 +23,85 @@
 
   &-menu--opened {
     .button-style(menu);
-    background-image: url('../img/button-menu-opened.svg');
+    background: url('../img/button-menu-opened.svg');
+  }
+
+  .button-style(link, @background-color, @text-color) {
+    display: block;
+    box-sizing: border-box;
+    border: none;
+    width: 100%;
+
+    font-family: inherit;
+    font-size: inherit;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    word-break: break-all;
+
+    background-color: @background-color;
+    color: @text-color;
   }
 
   &-link {
     .button-style(link, #68B738, #ffffff);
+    padding: 10px 44px;
+    line-height: 20px;
   }
 
   &-link--hero {
     .button-style(link, #68B738, #ffffff);
-    width: 244px;
+    @media (max-width: 767px) {
+      padding: 7px 44px;
+    }
+
+    @media (min-width: 768px) {
+      width: 244px;
+      padding: 14px 26px;
+    }
   }
 
   &-nav {
-
     @media (max-width: 767px) {
       .button-style(link, #ffffff, #000000);
-      // ЗДЕЛАТЬ ПРИМЕСЬ NAV
-      height: 66px;
-      padding: 21px 0 24px;
+      width: 100%;
+      padding: 22px 20px 24px;
+
       border-top: 1px solid #E6E6E6;
-      border-bottom: 1px solid #E6E6E6;
+      height: 66px;
+
+      &:last-child {
+        border-bottom: 1px solid #E6E6E6;
+      }
     }
 
     @media (min-width: 768px) and (max-width: 1439px) {
       .button-style(link, transparent, #000000);
-      padding: 0;
       width: auto;
-      min-height: unset;
+      max-width: 155px;
+      padding: 0;
     }
 
     @media (min-width: 1440px) {
-      // ЗДЕСЬ СТИЛЬ ДЛЯ ДЕСКТОПА
+      .button-style(link, transparent, #000000);
+      width: auto;
+      max-width: 175px;
+      padding: 0;
+    }
+  }
+
+  &-nav--hero-index {
+    @media (min-width: 1440px) {
       .button-style(link, transparent, #ffffff);
       width: auto;
       max-width: 175px;
-      min-height: unset;
       padding: 0;
     }
   }
 
   &-link-program {
     .button-style(link, transparent, #000000);
+
     padding: 0;
     padding-top: 15px;
     text-align: left;

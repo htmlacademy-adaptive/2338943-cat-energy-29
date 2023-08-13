@@ -1,45 +1,82 @@
 .section-title {
-  font-size: 60px;
-  line-height: 60px;
-  font-weight: 400;
-  overflow-wrap: break-word;
-
-
-  .font(@f-size, @l-height, @color) {
+  .title-style(@f-size: 60px, @l-height: 60px, @color: #000000) {
     font-size: @f-size;
     line-height: @l-height;
     color: @color;
+    font-weight: 400;
     overflow-wrap: break-word;
     margin: 0;
   }
 
   &--base {
-    .font(36px, 36px, #000000);
+
+    @media (max-width: 767px) {
+      .title-style(36px, 36px);
+    }
+
+    @media (min-width: 768px) {
+      .title-style();
+    }
   }
 
   &--hero {
-    width: 414px;
-    .font(60px, 60px, #000000);
-    padding: 30px 0;
 
     @media (max-width: 767px) {
-      .font(36px, 36px, #ffffff);
+      .title-style(36px, 36px, #ffffff);
       text-align: center;
       width: 280px;
-      margin: 0 auto;
-      padding: 7px 0 5px;
+
+      padding-top: 7px;
+      padding-right: 0;
+      padding-bottom: 5px;
+      padding-left: 0;
+    }
+
+    @media (min-width: 768px) {
+      .title-style();
+      width: 414px;
+      padding: 30px 0;
     }
   }
 
   &--program {
-    .font(24px, 37px, #000000 );
-    padding-top: 10px;
-    padding-bottom: 19px;
+
+    @media (max-width: 767px) {
+      .title-style(24px, 37px);
+      padding-top: 10px;
+      padding-right: 0;
+      padding-bottom: 19px;
+      padding-left: 0;
+    }
+
+    @media (min-width: 768px) {
+      .title-style(36px, 36px);
+    }
   }
 
   &--slider {
-    .font(36px, 40px, #000000);
-    margin: 0;
-    padding: 0 0 40px;
+    @media (max-width: 767px) {
+      .title-style(36px, 40px);
+      padding-top: 0;
+      padding-right: 0;
+      padding-bottom: 0;
+      padding-left: 40px;
+    }
+
+    @media (min-width: 768px) and (max-width: 1439px) {
+      .title-style();
+      padding-top: 0;
+      padding-right: 0;
+      padding-bottom: 60px;
+      padding-left: 0;
+    }
+
+    @media (min-width: 1440px) {
+      .title-style();
+      padding-top: 0;
+      padding-right: 0;
+      padding-bottom: 76px;
+      padding-left: 0;
+    }
   }
 }
