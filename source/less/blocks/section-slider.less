@@ -15,14 +15,16 @@
 
 .section-slider__list {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
-  gap: 32px;
+  // gap: 32px;
   text-align: center;
   margin: 0;
 }
 
 .slider__text {
   position: relative;
+  box-sizing: border-box;
   width: 124px;
   padding: 14px 20px;
   margin: 20px 0;
@@ -33,9 +35,13 @@
 .slider__termin {
   font-size: 24px;
   line-height: 24px;
+
+  &--bottom {
+
+  }
 }
 
-.slider__disc {
+.slider__desc {
   position: absolute;
   width: 82px;
   bottom: -17px;
@@ -43,6 +49,11 @@
   transform: translate(-50%);
   margin: 0;
   background-color: @slider-gr-color;
+
+  &--bottom {
+    margin: 0;
+    order: -1;
+  }
 }
 
 .section-slider__img {
