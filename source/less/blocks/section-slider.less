@@ -1,10 +1,16 @@
-@slider-bg-color: #eaeaea;
+@slider-gr-color: #eaeaea;
 
 .section-slider {
-  background-color: @slider-bg-color;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: @slider-gr-color;
+
   padding-top: 25px;
   padding-bottom: 40px;
 
+  @media (min-width: 768px) {
+    background: linear-gradient(to top, @slider-gr-color 462px, #ffffff 462px);
+  }
 }
 
 .section-slider__list {
@@ -36,6 +42,9 @@
   left: 50%;
   transform: translate(-50%);
   margin: 0;
-  background-color: @slider-bg-color;
+  background-color: @slider-gr-color;
 }
 
+.section-slider__img {
+
+}

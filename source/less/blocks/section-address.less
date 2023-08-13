@@ -1,15 +1,30 @@
 @section-padding: 10px;
 
 .section-address {
-
+  position: relative;
 }
 
 .section-address__header {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   min-width: 280px;
   margin: auto;
   padding: 24px 20px 26px;
+
+  @media (min-width: 768px) {
+    padding: 70px 61px;
+  }
+
+  @media (min-width: 1440px) {
+    position: absolute;
+    box-sizing: border-box;
+    left: 110px;
+    top: 95px;
+    width: 565px;
+    height: 199px;
+    padding: 61px 78px 60px 80px;
+    background-color: #ffffff;
+  }
 }
 
 .section-address__title {
@@ -19,6 +34,11 @@
   margin: 0;
   padding-top: 2px;
   padding-right: 17px;
+
+  @media (min-width: 1440px) {
+    font-size: 20px;
+    line-height: 26px;
+  }
 }
 
 .section-address__map {
