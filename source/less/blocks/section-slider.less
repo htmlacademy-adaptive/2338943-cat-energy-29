@@ -5,17 +5,21 @@
   flex-wrap: wrap;
   background-color: @slider-gradient-color;
 
-  padding-top: 25px;
-  padding-bottom: 40px;
 
-  @media (min-width: 768px) {
-    background-color: transparent;
+  @media (max-width: 767px) {
+    padding-top: 25px;
+    padding-bottom: 40px;
+  }
+
+  @media (min-width: 768px) and (max-width: 1439px) {
+    padding-bottom: 101px;
     background: linear-gradient(to top, @slider-gradient-color 462px, #ffffff 462px);
   }
 
   @media (min-width: 1440px) {
     padding-top: 70px;
     padding-bottom: 75px;
+    background: linear-gradient(to top, @slider-gradient-color 444px, #ffffff 444px);
   }
 }
 
@@ -60,6 +64,10 @@
   margin: 0;
   background-color: @slider-gradient-color;
 
+  @media (min-width: 768px) and (max-width: 1439px) {
+    background-color: #ffffff;
+  }
+
   &--bottom {
     margin: 0;
     order: -1;
@@ -67,11 +75,18 @@
 }
 
 @border-right-width: 4px;
-@padding-top: 10px;
 
 .section-slider__images-wrapper {
   position: relative;
-  padding-top: @padding-top;
+  padding-top: 10px;
+
+  @media (min-width: 768px) and (max-width: 1439px) {
+    padding-top: 99px;
+  }
+
+  @media (min-width: 1440px) {
+    padding-bottom: 10px;
+  }
 
   &::after {
     position: absolute;
@@ -103,13 +118,31 @@
 .slider__photo-fat {
   display: block;
   object-fit: cover;
-  background-color: #eaeaea;
+
+  @media (max-width: 767px) {
+    background-color: @slider-gradient-color;
+    width: 280px;
+    height: 256px;
+  }
+
+  @media (min-width: 768px) {
+    background: linear-gradient(to bottom, #ffffff 0, #ffffff 29.5%, @slider-gradient-color 29.5%, @slider-gradient-color 100%);
+  }
 }
 
 .slider__photo-skinny {
   display: block;
   position: absolute;
-  top: @padding-top;
+  top: 10px;
   right: 0;
   z-index: 0;
+
+  @media (max-width: 767px) {
+    width: 280px;
+    height: 256px;
+  }
+
+  @media (min-width: 768px) and (max-width: 1439px) {
+    padding-top: 99px;
+  }
 }

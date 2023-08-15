@@ -28,13 +28,17 @@
 }
 
 .hero__product-picture {
-  align-self: center;
+  @media (max-width: 767px) {
+    align-self: center;
+  }
 
   @media (min-width: 768px) and (max-width: 1439px) {
     position: absolute;
     width: 709px;
     height: 609px;
-    bottom: 0;
+    bottom: 20%;
+    left: 50%;
+    transform: translate(-50%, 25%);
     z-index: -1;
   }
 
@@ -42,5 +46,8 @@
     position: absolute;
     width: 552px;
     height: 499px;
+    top: 0;
+    right: 50%;
+    transform: translate(70%, 0);
   }
 }
