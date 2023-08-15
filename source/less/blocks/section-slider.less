@@ -1,28 +1,40 @@
-@slider-gr-color: #eaeaea;
+@slider-gradient-color: #eaeaea;
 
 .section-slider {
   display: flex;
   flex-wrap: wrap;
-  background-color: @slider-gr-color;
+  background-color: @slider-gradient-color;
 
   padding-top: 25px;
   padding-bottom: 40px;
 
   @media (min-width: 768px) {
-    background: linear-gradient(to top, @slider-gr-color 462px, #ffffff 462px);
+    background-color: transparent;
+    background: linear-gradient(to top, @slider-gradient-color 462px, #ffffff 462px);
+  }
+
+  @media (min-width: 1440px) {
+    padding-top: 70px;
+    padding-bottom: 75px;
   }
 }
 
 .section-slider__list {
   display: flex;
-  justify-content: space-between;
-  gap: 32px;
+  flex-wrap: wrap;
+  column-gap: 32px;
+  row-gap: 20px;
   text-align: center;
   margin: 0;
+
+  @media (min-width: 768px) {
+    column-gap: 42px;
+  }
 }
 
 .slider__text {
   position: relative;
+  box-sizing: border-box;
   width: 124px;
   padding: 14px 20px;
   margin: 20px 0;
@@ -33,18 +45,71 @@
 .slider__termin {
   font-size: 24px;
   line-height: 24px;
+
+  &--bottom {
+
+  }
 }
 
-.slider__disc {
+.slider__desc {
   position: absolute;
   width: 82px;
   bottom: -17px;
   left: 50%;
   transform: translate(-50%);
   margin: 0;
-  background-color: @slider-gr-color;
+  background-color: @slider-gradient-color;
+
+  &--bottom {
+    margin: 0;
+    order: -1;
+  }
 }
 
-.section-slider__img {
+@border-right-width: 4px;
+@padding-top: 10px;
 
+.section-slider__images-wrapper {
+  position: relative;
+  padding-top: @padding-top;
+
+  &::after {
+    position: absolute;
+    height: 40px;
+    width: 40px;
+    right: 50%;
+    top: 50%;
+    transform: translate(50% + @border-right-width, -50%);
+
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none"><rect x="1" y="1" width="38" height="38" rx="19" fill="white"/><path d="M16 11L8 20L16 29V11Z" fill="%23666666"/><path d="M32 20L24 11V29L32 20Z" fill="%23666666"/><rect x="1" y="1" width="38" height="38" rx="19" stroke="%23666666" stroke-width="2"/></svg>');
+    background-color: #ffffff;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+
+    content: "";
+    z-index: 2;
+  }
+}
+
+.section-slider__front-image-wrapper {
+  position: relative;
+  width: 50%;
+  border-right: @border-right-width solid #666666;
+  border-radius: 2px;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.slider__photo-fat {
+  display: block;
+  object-fit: cover;
+  background-color: #eaeaea;
+}
+
+.slider__photo-skinny {
+  display: block;
+  position: absolute;
+  top: @padding-top;
+  right: 0;
+  z-index: 0;
 }

@@ -14,6 +14,7 @@
 
   margin: 0;
   list-style: none;
+  counter-reset: number;
 
   @media (max-width: 767px) {
     padding: 40px 0 25px;
@@ -22,15 +23,18 @@
   @media (min-width: 768px) and (max-width: 1439px) {
     padding-top: 40px;
     padding-bottom: 47px;
-    padding-left: 0;
+    padding-left: 30;
+    padding-right: 30;
+    margin-left: -30px;
+    margin-right: -30px;
     column-gap: 154px;
     row-gap: 37px;
-    border-bottom: 1px solid red;
+    border-bottom: 1px solid #e6e6e6;
   }
 
   @media (min-width: 1440px) {
     gap: 95px;
-    padding: 0;
+    padding: 32px 0 69px;
   }
 }
 
@@ -38,17 +42,32 @@
   position: relative;
   box-sizing: border-box;
   width: 280px;
-  min-height: 60px;
   margin: 0 auto;
   margin-bottom: 20px;
   padding: 0 10px 0 80px;
 
+  counter-increment: number;
+
   @media (min-width: 768px) {
     width: 230px;
+    min-height: 280px;
     padding: 151px 26px 57px 0;
     margin: 0;
-  }
 
+    &::after {
+      font-family: Oswald;
+      font-size: 280px;
+      line-height: 280px;
+      color: #f2f2f2;
+      content: counter(number);
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 50%;
+      z-index: -1;
+    }
+  }
 }
 
 .advantages__item--icon {
