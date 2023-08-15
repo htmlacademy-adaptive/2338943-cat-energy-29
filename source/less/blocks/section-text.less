@@ -6,9 +6,7 @@
     line-height: @l-height;
     color: @color;
     margin: 0;
-    overflow-wrap: break-word;
     word-wrap: break-word;
-    // word-break: break-all;
   }
 
   &--regular {
@@ -16,10 +14,28 @@
     padding-top: 2px;
     letter-spacing: 0.03em;
     word-spacing: 0.11em;
-    margin: 0;
 
     @media (min-width: 768px) and (max-width: 1439px) {
       padding-top: 24px;
+      padding-bottom: 52px;
+    }
+
+    @media (min-width: 1440px) {
+      width: 436px;
+      padding-top: 20px;
+      padding-bottom: 49px;
+    }
+  }
+
+  &--slider {
+    .text(Lato, inherit, inherit, #444);
+    padding-top: 2px;
+    letter-spacing: 0.03em;
+    word-spacing: 0.11em;
+
+    @media (min-width: 768px) and (max-width: 1439px) {
+      padding-top: 24px;
+      padding-bottom: 52px;
     }
 
     @media (min-width: 1440px) {
@@ -50,17 +66,38 @@
   }
 
   &--slider_desc {
-    .text(Lato, 12px, 12px, #444);
+
+    @media (max-width: 767px) {
+      .text(Lato, 12px, 12px, #444);
+    }
+
+    @media (min-width: 768px) {
+      .text(Lato, 14px, 14px, #444);
+    }
   }
 
   &--slider_bottom {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+
+    row-gap: 1px;
     flex-grow: 1;
     text-transform: uppercase;
     padding-top: 10px;
     padding-bottom: 10px;
+
+    @media (min-width: 768px) and (max-width: 1439px) {
+      .text(Oswald, 20px, 20px, #000000);
+      flex-direction: column;
+      row-gap: 9px;
+    }
+
+    @media (min-width: 1440px) {
+      width: 327px;
+      flex-grow: 0;
+      justify-content: space-between;
+    }
   }
 
   &--form {
