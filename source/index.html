@@ -14,7 +14,7 @@
     <picture>
       <source media="(min-width: 1440px)" width="70" height="59" srcset="img/logo-desktop.svg">
       <source media="(min-width: 768px)" width="60" height="50" srcset="img/logo-tablet.svg">
-      <img class="page-header__logo" width="33" height="38" src="img/logo-mobile.svg" alt="Логотип.">
+      <img class="page-header__logo" src="img/logo-mobile.svg" width="33" height="38" alt="Логотип.">
     </picture>
     <svg class="page-header__title" width="101" height="18" viewBox="0 0 101 18" fill="none" xmlns="http://www.w3.org/2000/svg">
       <g clip-path="url(#clip0_135_3354)">
@@ -35,7 +35,7 @@
       </defs>
     </svg>
     <button class="button-menu button-menu--close"></button>
-    <nav class="page-header__nav page-header__nav--open">
+    <nav class="page-header__nav">
       <a class="button-nav button-nav--hero-index" href="#">Главная</a>
       <a class="button-nav button-nav--hero-index" href="catalog.html">Каталог продукции</a>
       <a class="button-nav button-nav--hero-index" href="form.html">Подбор программ</a>
@@ -49,9 +49,9 @@
         <p class="section-text--hero">Занялся собой? Займись котом!</p>
       </div>
       <picture>
-        <source media="(min-width: 1440px)" width="552" height="499" srcset="img/product-picture-desktop.png">
-        <source media="(min-width: 768px)" width="709" height="609" srcset="img/product-picture-tablet.png">
-        <img class="hero__product-picture" src="img/product-picture-mobile.png" width="280" height="270" alt="Изображение нашего продукта.">
+        <source media="(min-width: 1440px)" width="552" height="499" srcset="img/product-picture-desktop.png 1x, img/product-picture-desktop@2x.png 2x">
+        <source media="(min-width: 768px)" width="709" height="609" srcset="img/product-picture-tablet.png 1x, img/product-picture-tablet@2x.png 2x">
+        <img class="hero__product-picture" src="img/product-picture-mobile.png" width="280" height="270" srcset="img/product-picture-mobile@2x.png 2x" alt="Изображение нашего продукта.">
       </picture>
       <a class="section-hero__button button-link--hero" href="form.html">Подобрать программу</a>
     </section>
@@ -92,7 +92,7 @@
           </div>
           <div class="section-text--slider_bottom">
             <dt class="slider__termin--bottom">15 000 руб.</dt>
-            <dd class="slider__desc--bottom">Затраты на питание:&nbsp</dd>
+            <dd class="slider__desc--bottom">Затраты на питание:&nbsp;</dd>
           </div>
         </dl>
       </div>
@@ -100,13 +100,13 @@
         <div>
           <div class="section-slider__front-image-wrapper">
             <picture>
-              <source media="(min-width: 768px)" width="560" height="512" srcset="img/fat-cat-tablet-desktop.png">
-              <img class="slider__photo-fat" src="img/fat-cat-mobile.png" width="280" height="256" alt="Фото толстого кота.">
+              <source media="(min-width: 768px)" width="560" height="512" srcset="img/fat-cat-tablet-desktop.png 1x, img/fat-cat-tablet-desktop@2x.png 2x">
+              <img class="slider__photo-fat" src="img/fat-cat-mobile.png" width="280" height="256" srcset="img/fat-cat-mobile@2x.png 2x" alt="Фото толстого кота.">
             </picture>
           </div>
           <picture>
-            <source media="(min-width: 768px)" width="560" height="512" srcset="img/skinny-cat-tablet-desktop.png">
-            <img class="slider__photo-skinny" src="img/skinny-cat-mobile.png" width="280" height="256" alt="Фото худого кота.">
+            <source media="(min-width: 768px)" width="560" height="512" srcset="img/skinny-cat-tablet-desktop.png 1x, img/skinny-cat-tablet-desktop@2x.png 2x">
+            <img class="slider__photo-skinny" src="img/skinny-cat-mobile.png" width="280" height="256" srcset="img/skinny-cat-mobile@2x.png 2x" alt="Фото худого кота.">
           </picture>
         </div>
       </div>

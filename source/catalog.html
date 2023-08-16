@@ -11,7 +11,11 @@
 </head>
 <body class="page">
   <header class="page-header">
-    <img class="page-header__logo" src="img/logo-mobile.svg" alt="Логотип.">
+    <picture>
+      <source media="(min-width: 1440px)" width="70" height="59" srcset="img/logo-desktop.svg">
+      <source media="(min-width: 768px)" width="60" height="50" srcset="img/logo-tablet.svg">
+      <img class="page-header__logo" src="img/logo-mobile.svg" width="33" height="38" alt="Логотип.">
+    </picture>
     <svg class="page-header__title" width="101" height="18" viewBox="0 0 101 18" fill="none" xmlns="http://www.w3.org/2000/svg">
       <g clip-path="url(#clip0_135_3354)">
         <path d="M1.26449 16.5385C0.36955 15.2762 -0.0747041 13.7627 1.02073e-05 12.2308V5.84615C-0.108365 4.29774 0.308071 2.75746 1.18546 1.46154C2.05478 0.461538 3.39829 0 5.37403 0C7.34978 0 8.61425 0.461538 9.40455 1.30769C10.2626 2.37941 10.6846 3.72136 10.59 5.07692V6.61539H6.71754V4.84615C6.74881 4.32289 6.66808 3.799 6.48045 3.30769C6.38016 3.10938 6.2212 2.9448 6.02403 2.83513C5.82686 2.72547 5.60049 2.67572 5.37403 2.69231C4.82082 2.69231 4.42568 2.84615 4.26762 3.23077C4.08883 3.77733 4.00862 4.34988 4.03053 4.92308V13.1538C3.98879 13.71 4.0978 14.267 4.34665 14.7692C4.5047 15.1538 4.89985 15.3077 5.45306 15.3077C6.00627 15.3077 6.32239 15.1538 6.48045 14.7692C6.66013 14.2494 6.74049 13.7019 6.71754 13.1538V11.3077H10.59V12.8462C10.6704 14.2238 10.2508 15.5852 9.40455 16.6923C8.61425 17.6154 7.27075 18.0769 5.37403 18.0769C3.47732 18 2.05478 17.5385 1.26449 16.5385Z" fill="#111111"/>
@@ -32,9 +36,9 @@
     </svg>
     <button class="button-menu button-menu--close"></button>
     <nav class="page-header__nav">
-      <a class="button-nav" href="index.html">Главная</a>
-      <a class="button-nav" href="#">Каталог продукции</a>
-      <a class="button-nav" href="form.html">Подбор программ</a>
+      <a class="button-nav button-nav--hero-index" href="#">Главная</a>
+      <a class="button-nav button-nav--hero-index" href="catalog.html">Каталог продукции</a>
+      <a class="button-nav button-nav--hero-index" href="form.html">Подбор программ</a>
     </nav>
   </header>
   <main>
@@ -230,7 +234,7 @@
       <div class="section-address__map"></div>
     </section>
   </main>
-  <footer class="page-footer page-footer">
+  <footer class="page-footer">
     <svg class="page-footer__title" xmlns="http://www.w3.org/2000/svg" width="128" height="24" viewBox="0 0 128 24" fill="none">
       <path d="M1.6236 21.9574C0.489608 20.2815 -0.0733133 18.2722 0.0213584 16.2383V7.7617C-0.115966 5.70593 0.411707 3.66097 1.52346 1.94043C2.62499 0.612766 4.32737 0 6.83086 0C9.33436 0 10.9366 0.612766 11.938 1.73617C13.0252 3.15904 13.56 4.9407 13.4401 6.74043V8.78298H8.53324V6.43404C8.57287 5.73932 8.47057 5.04378 8.23282 4.39149C8.10574 4.12819 7.90433 3.90969 7.65449 3.76409C7.40465 3.61849 7.11781 3.55245 6.83086 3.57447C6.12989 3.57447 5.62919 3.77872 5.42891 4.28936C5.20237 5.015 5.10073 5.77516 5.12849 6.53617V17.4638C5.0756 18.2022 5.21373 18.9417 5.52905 19.6085C5.72933 20.1192 6.23003 20.3234 6.931 20.3234C7.63198 20.3234 8.03254 20.1192 8.23282 19.6085C8.4605 18.9183 8.56232 18.1914 8.53324 17.4638V15.0128H13.4401V17.0553C13.5419 18.8844 13.0103 20.6918 11.938 22.1617C10.9366 23.3872 9.23422 24 6.83086 24C4.42751 23.8979 2.62499 23.2851 1.6236 21.9574Z" fill="#111111"/>
       <path d="M19.3483 0.306396H25.0563L29.2622 23.5915H24.6557L23.8546 18.6894H20.55L19.7489 23.5915H15.0423L19.3483 0.306396ZM23.454 15.6255L22.2524 6.53618L21.0507 15.6255H23.454Z" fill="#111111"/>
@@ -265,7 +269,7 @@
         </a>
       </li>
     </ul>
-    <a class="page-footer__developer-link developer-link" href="#">
+    <a class="page-footer__developer-link" href="#">
       <span>HTML Academy</span>
       <svg class="developer-link__item" width="27" height="35" viewBox="0 0 27 35" fill="none" xmlns="http://www.w3.org/2000/svg">
       <g clip-path="url(#clip0_92427_197)">
