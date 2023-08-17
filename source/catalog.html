@@ -36,9 +36,9 @@
     </svg>
     <button class="button-menu button-menu--close"></button>
     <nav class="page-header__nav">
-      <a class="button-nav button-nav--hero-index" href="#">Главная</a>
-      <a class="button-nav button-nav--hero-index" href="catalog.html">Каталог продукции</a>
-      <a class="button-nav button-nav--hero-index" href="form.html">Подбор программ</a>
+      <a class="button-nav button-nav--hero" href="#">Главная</a>
+      <a class="button-nav button-nav--hero" href="catalog.html">Каталог продукции</a>
+      <a class="button-nav button-nav--hero" href="form.html">Подбор программ</a>
     </nav>
   </header>
   <main>
@@ -46,7 +46,7 @@
       <h1 class="section__title">Каталог продукции</h1>
       <h2 class="visually-hidden">Основные продукты.</h2>
       <ul class="section-products__list products-list">
-        <li class="products-card">
+        <li class="products-card products-card">
           <figure class="products-card__info">
             <figcaption class="products-card__text">
               <h3 class="products-card__title">Cat Energy<br>PRO 500 г</h3>
@@ -65,76 +65,11 @@
                 </div>
               </dl>
             </figcaption>
-            <img class="products-card__picture" width="140" height="112" src="img/catalog/catalog-1.jpg" alt="Фото нашего продукта.">
-          </figure>
-          <a class="button-link" href="form.html">Заказать</a>
-        </li>
-        <li class="products-card">
-          <figure class="products-card__info">
-            <figcaption class="products-card__text">
-              <h3 class="products-card__title">Cat Energy<br>PRO 500 г</h3>
-              <dl class="products-card__disc">
-                <div class="products-card__disc-item">
-                  <dt>Масса</dt>
-                  <dd>500 г.</dd>
-                </div>
-                <div class="products-card__disc-item">
-                  <dt>Вкус</dt>
-                  <dd>Курица</dd>
-                </div>
-                <div class="products-card__disc-item">
-                  <dt>Цена</dt>
-                  <dd>700 ₽</dd>
-                </div>
-              </dl>
-            </figcaption>
-            <img class="products-card__picture" width="140" height="112" src="img/catalog/catalog-1.jpg" alt="Фото нашего продукта.">
-          </figure>
-          <a class="button-link" href="form.html">Заказать</a>
-        </li>
-        <li class="products-card">
-          <figure class="products-card__info">
-            <figcaption class="products-card__text">
-              <h3 class="products-card__title">Cat Energy<br>PRO 500 г</h3>
-              <dl class="products-card__disc">
-                <div class="products-card__disc-item">
-                  <dt>Масса</dt>
-                  <dd>500 г.</dd>
-                </div>
-                <div class="products-card__disc-item">
-                  <dt>Вкус</dt>
-                  <dd>Курица</dd>
-                </div>
-                <div class="products-card__disc-item">
-                  <dt>Цена</dt>
-                  <dd>700 ₽</dd>
-                </div>
-              </dl>
-            </figcaption>
-            <img class="products-card__picture" width="140" height="112" src="img/catalog/catalog-1.jpg" alt="Фото нашего продукта.">
-          </figure>
-          <a class="button-link" href="form.html">Заказать</a>
-        </li>
-        <li class="products-card">
-          <figure class="products-card__info">
-            <figcaption class="products-card__text">
-              <h3 class="products-card__title">Cat Energy<br>PRO 500 г</h3>
-              <dl class="products-card__disc">
-                <div class="products-card__disc-item">
-                  <dt>Масса</dt>
-                  <dd>500 г.</dd>
-                </div>
-                <div class="products-card__disc-item">
-                  <dt>Вкус</dt>
-                  <dd>Курица</dd>
-                </div>
-                <div class="products-card__disc-item">
-                  <dt>Цена</dt>
-                  <dd>700 ₽</dd>
-                </div>
-              </dl>
-            </figcaption>
-            <img class="products-card__picture" width="140" height="112" src="img/catalog/catalog-1.jpg" alt="Фото нашего продукта.">
+            <picture>
+              <source media="(min-width: 1440px)" width="169" height="210" srcset="img/catalog/desktop-01.png 1x, img/catalog/desktop-01@2x.png 2x">
+              <source media="(min-width: 768px)" width="200" height="210" srcset="img/catalog/tablet-01.png 1x, img/catalog/desktop-01@2x.png 2x">
+              <img class="products-card__picture" src="img/catalog/mobile-01.png" srcset="img/catalog/mobile-01@2x.png 2x" width="140" height="112" alt="Фото нашего продукта.">
+            </picture>
           </figure>
           <a class="button-link" href="form.html">Заказать</a>
         </li>
@@ -157,30 +92,11 @@
                 </div>
               </dl>
             </figcaption>
-            <img class="products-card__picture" width="140" height="112" src="img/catalog/catalog-1.jpg" alt="Фото нашего продукта.">
-          </figure>
-          <a class="button-link" href="form.html">Заказать</a>
-        </li>
-        <li class="products-card products-card">
-          <figure class="products-card__info">
-            <figcaption class="products-card__text">
-              <h3 class="products-card__title">Cat Energy<br>PRO 500 г</h3>
-              <dl class="products-card__disc">
-                <div class="products-card__disc-item">
-                  <dt>Масса</dt>
-                  <dd>500 г.</dd>
-                </div>
-                <div class="products-card__disc-item">
-                  <dt>Вкус</dt>
-                  <dd>Курица</dd>
-                </div>
-                <div class="products-card__disc-item">
-                  <dt>Цена</dt>
-                  <dd>700 ₽</dd>
-                </div>
-              </dl>
-            </figcaption>
-            <img class="products-card__picture" width="140" height="112" src="img/catalog/catalog-1.jpg" alt="Фото нашего продукта.">
+            <picture>
+              <source media="(min-width: 1440px)" width="169" height="210" srcset="img/catalog/desktop-02.png 1x, img/catalog/desktop-02@x.png 2x">
+              <source media="(min-width: 768px)" width="200" height="210" srcset="img/catalog/tablet-02.png 1x, img/catalog/tablet-02@2x.png 2x">
+              <img class="products-card__picture" src="img/catalog/mobile-02.png" srcset="img/catalog/mobile-02.png 2x" width="140" height="112" alt="Фото нашего продукта.">
+            </picture>
           </figure>
           <a class="button-link" href="form.html">Заказать</a>
         </li>
