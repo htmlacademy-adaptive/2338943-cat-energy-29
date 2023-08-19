@@ -1,15 +1,34 @@
+.font-form() {
+  color: #444;
+  font-family: Oswald, sans-serif;
+
+  @media (max-width: 767px) {
+    font-size: 16px;
+  }
+
+  font-size: 20px;
+}
+
 .label-input {
+  .font-form();
+  box-sizing: border-box;
+  position: relative;
   display: flex;
   align-items: center;
-  margin-bottom: 14px;
   text-transform: uppercase;
+  padding-bottom: 20px;
+  width: 100%;
+  @media (max-width: 767px) {
+    padding-bottom: 14px;
+  }
 }
 
 .label-input__field {
-  flex-grow: 1;
+  .font-form();
+  width: 100%;
   box-sizing: border-box;
   height: 45px;
-  width: auto;
+
   padding: 14px 15px 13px;
   margin: 0;
   margin-left: 13px;
@@ -18,9 +37,78 @@
 }
 
 .label-input__radio {
+  @media (max-width: 767px) {
+    padding: 5px 0 18px 45px;
+  }
 
+  @media (min-width: 768px) {
+    padding: 5px 0 18px 60px;
+  }
 }
+
+.input__radio-visually {
+  box-sizing: border-box;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  @media (max-width: 767px) {
+    width: 30px;
+    height: 30px;
+  }
+
+  width: 40px;
+  height: 40px;
+
+  margin: 0;
+
+  background: #ffffff;
+  border: 1px solid #cdcdcd;
+  border-radius: 50%;
+}
+
+.visually-hidden:hover + .input__radio-visually {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40' fill='none'%3E%3Ccircle cx='20' cy='20' r='19.5' stroke='%23CDCDCD'/%3E%3Ccircle cx='20' cy='20' r='9' fill='%2368B738'/%3E%3C/svg%3E");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+// .visually-hidden:active + .input__radio-visually {
+//   opacity: 0.2;
+//   border-color: #83b3d3;
+// }
+
+// .visually-hidden:focus-visible + .input__radio-visually {
+//   border-color: #83b3d3;
+//   outline: none;
+// }
 
 .label-input__checkbox {
-
+  padding: 5px 0 18px 60px;
+  width: 245px;
 }
+
+.input__checkbox-visually {
+  box-sizing: border-box;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  @media (max-width: 767px) {
+    width: 30px;
+    height: 30px;
+  }
+
+  width: 40px;
+  height: 40px;
+  margin: 0;
+
+  background: #ffffff;
+  border: 1px solid #cdcdcd;
+}
+
+.visually-hidden:checked + .input__checkbox-visually {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='26' height='26' viewBox='0 0 26 26' fill='none'%3E%3Cpath d='M10 19.499L2.4 10.901L1 12.4848L10 22.6667L25 5.69697L23.6 4L10 19.499Z' fill='%2368B738'/%3E%3C/svg%3E");
+  background-position: center;
+  background-repeat: no-repeat;
+ }

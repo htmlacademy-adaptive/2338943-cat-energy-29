@@ -49,6 +49,24 @@
     line-height: 20px;
   }
 
+  &-submit {
+    .button-style(link, #68B738, #ffffff);
+    padding: 10px 44px;
+    line-height: 20px;
+
+    @media (max-width: 767px) {
+      width: 100%;
+    }
+
+    @media (min-width: 768px) and (max-width: 1439px) {
+      width: 282px;
+    }
+
+    @media (min-width: 1440px) {
+      width: 570px;
+    }
+  }
+
   &-link--hero {
     .button-style(link, #68B738, #ffffff);
     @media (max-width: 767px) {

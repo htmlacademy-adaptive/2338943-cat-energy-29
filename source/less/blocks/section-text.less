@@ -14,7 +14,10 @@
     padding-top: 2px;
     letter-spacing: 0.03em;
     word-spacing: 0.11em;
+  }
 
+  &--address {
+    .text(Lato, inherit, inherit, #444);
     @media (min-width: 768px) {
       width: 157px;
     }
@@ -94,6 +97,9 @@
   }
 
   &--form {
+    @media (min-width: 768px) {
+      .text(Oswald, 20px, 30px, #000000);
+    }
     text-transform: uppercase;
   }
 }

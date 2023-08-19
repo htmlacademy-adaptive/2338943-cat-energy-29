@@ -36,50 +36,73 @@
     </svg>
     <button class="button-menu button-menu--close"></button>
     <nav class="page-header__nav">
-      <a class="button-nav button-nav--hero" href="#">Главная</a>
+      <a class="button-nav button-nav--hero" href="index.html">Главная</a>
       <a class="button-nav button-nav--hero" href="catalog.html">Каталог продукции</a>
-      <a class="button-nav button-nav--hero" href="form.html">Подбор программ</a>
+      <a class="button-nav button-nav--hero" href="#">Подбор программ</a>
     </nav>
   </header>
   <main class="page__main">
     <section class="main__section section-form">
       <h1 class="section-form__title section-title--base">Подбор программы</h1>
-      <p class="section-form__text section-text--form">Заполните анкету, и мы подберём программу питания для вашего кота</p>
-      <form class="form-order" action="https://echo.htmlacademy.ru/courses" method="post">
-        <fieldset class="form-fieldset">
-          <label class="label-input">Имя:*<input class="label-input__field" type="text" placeholder="Барсик"></label>
-          <label class="label-input">Вес&nbsp;(кг):*<input class="label-input__field" type="number" placeholder="7"></label>
-          <label class="label-input">Возраст&nbsp;(лет):<input class="label-input__field" type="number" placeholder="7"></label>
-        </fieldset>
-        <fieldset class="form-fieldset">
-          <label class="label-input"><input class="label-input__radio" type="radio" name="program-selection">Похудение</label>
-          <label class="label-input"><input class="label-input__radio" type="radio" name="program-selection">Набор массы</label>
-          <label class="label-input"><input class="label-input__radio" type="radio" name="program-selection">Не знаю (нужен ваш совет)</label>
-        </fieldset>
-        <fieldset class="form-fieldset">
-          <legend>Контактные данные (владельца кота)</legend>
+      <p class="section-form__text section-text--form">Заполните анкету, и мы подберём<br>программу питания для вашего кота</p>
+      <form class="page__form" action="https://echo.htmlacademy.ru/courses" method="post">
+        <div class="page__form-data-cat">
+          <fieldset class="form-fieldset form-fieldset--data-cat">
+            <label class="label-input">Имя:*<input class="label-input__field" type="text" placeholder="Барсик"></label>
+            <label class="label-input">Вес&nbsp;(кг):*<input class="label-input__field" type="number" placeholder="7"></label>
+            <label class="label-input">Возраст&nbsp;(лет):<input class="label-input__field" type="number" placeholder="7"></label>
+          </fieldset>
+          <fieldset class="form-fieldset form-fieldset--radio">
+            <label class="label-input label-input__radio">
+              <input class="visually-hidden" type="radio" name="program-selection">Похудение
+              <span class="input__radio-visually"></span>
+            </label>
+            <label class="label-input label-input__radio">
+              <input class="visually-hidden" type="radio" name="program-selection">Набор массы
+              <span class="input__radio-visually"></span>
+            </label>
+            <label class="label-input label-input__radio">
+              <input class="visually-hidden" type="radio" name="program-selection">Не знаю (нужен ваш совет)
+              <span class="input__radio-visually"></span>
+            </label>
+          </fieldset>
+        </div>
+        <fieldset class="form-fieldset form-fieldset--data-owner">
+          <legend class="form-fieldset__legend">Контактные&nbsp;данные (владельца кота)</legend>
           <label class="label-input">E-mail:* <input class="label-input__field" type="email" placeholder="kuklachev@gmail.com"></label>
           <label class="label-input">Телефон:* <input class="label-input__field" type="email" placeholder="8 (960) 900-60-90"></label>
         </fieldset>
         <fieldset class="form-fieldset">
-          <legend>Комментарий</legend>
+          <legend class="form-fieldset__legend">Комментарий</legend>
           <textarea class="form__cat-description" name="cat-description" id="cat-description" cols="30" rows="10">Расскажите обо всех повадках кота</textarea>
         </fieldset>
-        <fieldset class="form-fieldset">
-          <legend>Дополнительно</legend>
-          <label class="label-input"><input class="label-input__checkbox" type="checkbox" name="sweetener">Сахарозаменитель</label>
-          <label class="label-input"><input class="label-input__checkbox" type="checkbox" name="drinking-water">Питьевая вода</label>
-          <label class="label-input"><input class="label-input__checkbox" type="checkbox" name="milk">Молоко</label>
-          <label class="label-input"><input class="label-input__checkbox" type="checkbox" name="vitamins">Витамины</label>
+        <fieldset class="form-fieldset form-fieldset--additionally">
+          <legend class="form-fieldset__legend">Дополнительно</legend>
+          <label class="label-input label-input__checkbox">
+            <input class="visually-hidden" type="checkbox" name="sweetener">Сахарозаменитель
+            <span class="input__checkbox-visually"></span>
+          </label>
+          <label class="label-input label-input__checkbox">
+            <input class="visually-hidden" type="checkbox" name="drinking-water">Питьевая вода
+            <span class="input__checkbox-visually"></span>
+          </label>
+          <label class="label-input label-input__checkbox">
+            <input class="visually-hidden" type="checkbox" name="milk">Молоко
+            <span class="input__checkbox-visually"></span>
+          </label>
+          <label class="label-input label-input__checkbox">
+            <input class="visually-hidden" type="checkbox" name="vitamins">Витамины
+            <span class="input__checkbox-visually"></span>
+          </label>
         </fieldset>
-        <button class="button-link" type="submit">Отправить заявку</button>
+        <button class="button-submit" type="submit">Отправить заявку</button>
         <p class="form-footnote">* - Обязательные поля</p>
       </form>
     </section>
     <section class="main__section section-address">
       <header class="section-address__header">
         <h2 class="section-address__title">Приглашаем<br>к&nbsp;сотрудничеству<br>дилеров!</h2>
-        <p class="section-text--regular">ул.&nbsp;Большая<br>Конюшенная,&nbsp;д.&nbsp;19/8<br>Санкт-Петербург</p>
+        <p class="section-text--address">ул.&nbsp;Большая<br>Конюшенная,&nbsp;д.&nbsp;19/8<br>Санкт-Петербург</p>
       </header>
       <div class="section-address__map"></div>
     </section>
