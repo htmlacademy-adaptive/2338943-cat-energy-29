@@ -18,15 +18,21 @@
   }
 
   &__form-data-cat {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 80px;
-    border-color: transparent;
-    margin: 0;
-    padding: 0;
-    padding-bottom: 70px;
-    padding-top: 60px;
 
+    @media (min-width: 768px) and (max-width: 1439px) {
+      width: 100%;
+    }
+
+    @media (min-width: 1440px) {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 80px;
+      border-color: transparent;
+      margin: 0;
+      padding: 0;
+      padding-bottom: 70px;
+      padding-top: 60px;
+    }
   }
 }
 

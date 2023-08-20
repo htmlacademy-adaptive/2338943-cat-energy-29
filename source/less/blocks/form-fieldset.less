@@ -1,9 +1,8 @@
 .form-fieldset {
-
-  box-sizing: border-box;
   display: flex;
   flex-wrap: wrap;
   width: 100%;
+
 
   @media (max-width: 767px) {
     padding: 23px 20px 27px;
@@ -18,10 +17,6 @@
   @media (min-width: 1440px) {
     padding: 23px 110px 27px;
     margin: 0;
-    // width: 100%;
-    // margin-left: -110px;
-    // margin-right: -110px;
-    // margin: 0 -110px 0;
   }
 
   border: 0;
@@ -29,37 +24,80 @@
 
   &--data-cat {
     border: none;
-    padding: 0;
+    flex-direction: column;
+    justify-content: space-between;
+
+
+    @media (max-width: 767px) {
+      gap: 14px;
+    }
+
+    @media (min-width: 768px) {
+      gap: 20px;
+    }
 
     @media (min-width: 1440px) {
       width: 570px;
+      box-sizing: border-box;
+      padding: 0;
     }
   }
 
   &--radio {
     flex-direction: column;
+    justify-content: space-between;
     border: 1px solid #E7E7E7;
 
     @media (max-width: 767px) {
+      gap: 25px;
+      padding: 23px 20px 27px;
       margin: 0 -20px 0;
       border-left: transparent;
       border-right: transparent;
     }
 
-    @media (min-width: 1440px) {
-      width: 570px;
+    @media (min-width: 768px) and (max-width: 1439px) {
+      box-sizing: border-box;
+      gap: 23px;
+      margin: 0;
     }
 
-    margin: 0;
-    padding: 25px 28px;
+    @media (min-width: 1440px) {
+      box-sizing: border-box;
+      gap: 23px;
+      width: 570px;
+      padding: 25px 28px;
+      margin: 0;
+    }
   }
 
   &--data-owner {
     justify-content: start;
+
+    @media (min-width: 1440px) {
+      display: grid;
+      grid-template-columns: 570px 570px;
+      gap: 80px;
+      margin-left: -110px;
+      margin-right: -110px;
+    }
+
   }
 
   &--additionally {
     justify-content: space-between;
+
+    @media (min-width: 1440px) {
+      margin-left: -110px;
+      margin-right: -110px;
+    }
+  }
+
+  &--comment {
+    @media (min-width: 1440px) {
+      margin-left: -110px;
+      margin-right: -110px;
+    }
   }
 
   &__legend {
@@ -68,6 +106,7 @@
     line-height: 36px;
     background-color: #ffffff;
     padding: 0 40px 0;
+    margin-left: -40px;
 
     @media (max-width: 767px) {
       font-size: 24px;
@@ -76,6 +115,8 @@
       padding: 0 20px 0;
       width: min-content;
     }
+
+
   }
 }
 
