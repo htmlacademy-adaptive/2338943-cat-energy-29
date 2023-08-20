@@ -39,12 +39,20 @@
 
 .page-header__title {
   .grid-position(2 / 3, 1 / 2);
-  padding-top: 10px;
 
   @media (max-width: 767px) {
-    .grid-position(2 / 3, 1 / 2);
     margin: 0 auto;
     padding: 10px;
+  }
+
+  @media (min-width: 768px) and (max-width: 1439px) {
+    padding: 16px 13px;
+  }
+
+  @media (min-width: 1440px) {
+    padding: 19px 14px;
+    width: 118px;
+    height: 21px;
   }
 }
 

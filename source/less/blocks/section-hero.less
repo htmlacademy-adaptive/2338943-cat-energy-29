@@ -5,15 +5,26 @@
 
   @media (max-width: 767px) {
     align-items: center;
+    padding-top: 20px;
     background:
-      url("../img/hero-background.png"),
+      url("../img/hero-background.jpg"),
       linear-gradient(to right, #68B738 0, #5e9e36 50%,#5a9933 50%, #68B738 100%);
     background-size:
       320px 302px,
       767px 302px;
     background-repeat: no-repeat;
     background-position: center top;
-    padding-top: 20px;
+  }
+
+  @media (max-width: 767px) and (min-resolution: 2dppx) {
+    background:
+      url("../img/hero-background@2x.jpg"),
+      linear-gradient(to right, #68B738 0, #5e9e36 50%,#5a9933 50%, #68B738 100%);
+    background-size:
+      320px 302px,
+      767px 302px;
+    background-repeat: no-repeat;
+    background-position: center top;
   }
 
   @media (min-width: 768px) and (max-width: 1439px) {
@@ -28,19 +39,22 @@
 }
 
 .hero__product-picture {
-  align-self: center;
+  @media (max-width: 767px) {
+    align-self: center;
+  }
 
   @media (min-width: 768px) and (max-width: 1439px) {
     position: absolute;
-    width: 709px;
-    height: 609px;
-    bottom: 0;
+    bottom: 20%;
+    left: 50%;
+    transform: translate(-50%, 25%);
     z-index: -1;
   }
 
   @media (min-width: 1440px) {
     position: absolute;
-    width: 552px;
-    height: 499px;
+    top: 0;
+    right: 50%;
+    transform: translate(70%, 0);
   }
 }

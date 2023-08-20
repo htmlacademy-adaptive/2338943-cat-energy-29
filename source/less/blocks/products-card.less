@@ -18,6 +18,7 @@
   @media (min-width: 768px) and (max-width: 1439px) {
     width: 324px;
     padding: 0px 37px 40px;
+    background: linear-gradient(to top, #f2f2f2 0, #f2f2f2 75%, transparent 75%, transparent 100%);
   }
 
   @media (min-width: 1440px) {
@@ -38,8 +39,6 @@
 }
 
 .products-card__picture {
-  order: -1;
-
   @media (max-width: 767px) {
     margin: auto;
     margin-right: 0;
@@ -51,9 +50,9 @@
     margin-right: auto;
     min-width: 140px;
   }
-
+  order: 2;
   margin: auto;
-
+  text-align: center;
 }
 
 .font-text(@f-size, @t-transform) {

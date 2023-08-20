@@ -11,7 +11,11 @@
 </head>
 <body class="page page--background">
   <header class="page-header">
-    <img class="page-header__logo" src="img/logo-mobile.svg" alt="Логотип.">
+    <picture>
+      <source media="(min-width: 1440px)" width="70" height="59" srcset="img/logo-desktop.svg">
+      <source media="(min-width: 768px)" width="60" height="50" srcset="img/logo-tablet.svg">
+      <img class="page-header__logo" src="img/logo-mobile.svg" width="33" height="38" alt="Логотип.">
+    </picture>
     <svg class="page-header__title" width="101" height="18" viewBox="0 0 101 18" fill="none" xmlns="http://www.w3.org/2000/svg">
       <g clip-path="url(#clip0_135_3354)">
         <path d="M1.26449 16.5385C0.36955 15.2762 -0.0747041 13.7627 1.02073e-05 12.2308V5.84615C-0.108365 4.29774 0.308071 2.75746 1.18546 1.46154C2.05478 0.461538 3.39829 0 5.37403 0C7.34978 0 8.61425 0.461538 9.40455 1.30769C10.2626 2.37941 10.6846 3.72136 10.59 5.07692V6.61539H6.71754V4.84615C6.74881 4.32289 6.66808 3.799 6.48045 3.30769C6.38016 3.10938 6.2212 2.9448 6.02403 2.83513C5.82686 2.72547 5.60049 2.67572 5.37403 2.69231C4.82082 2.69231 4.42568 2.84615 4.26762 3.23077C4.08883 3.77733 4.00862 4.34988 4.03053 4.92308V13.1538C3.98879 13.71 4.0978 14.267 4.34665 14.7692C4.5047 15.1538 4.89985 15.3077 5.45306 15.3077C6.00627 15.3077 6.32239 15.1538 6.48045 14.7692C6.66013 14.2494 6.74049 13.7019 6.71754 13.1538V11.3077H10.59V12.8462C10.6704 14.2238 10.2508 15.5852 9.40455 16.6923C8.61425 17.6154 7.27075 18.0769 5.37403 18.0769C3.47732 18 2.05478 17.5385 1.26449 16.5385Z" fill="#111111"/>
@@ -31,7 +35,7 @@
       </defs>
     </svg>
     <button class="button-menu button-menu--close"></button>
-    <nav class="page-header__nav page-header__nav--open">
+    <nav class="page-header__nav">
       <a class="button-nav button-nav--hero-index" href="#">Главная</a>
       <a class="button-nav button-nav--hero-index" href="catalog.html">Каталог продукции</a>
       <a class="button-nav button-nav--hero-index" href="form.html">Подбор программ</a>
@@ -44,20 +48,24 @@
         <h2 class="section-title section-title--hero">Функциональное питание для котов</h2>
         <p class="section-text--hero">Занялся собой? Займись котом!</p>
       </div>
-      <img class="hero__product-picture" src="img/product-picture-mobile.png" width="280" height="270" alt="Изображение нашего продукта.">
+      <picture>
+        <source media="(min-width: 1440px)" width="552" height="499" srcset="img/product-picture-desktop.png 1x, img/product-picture-desktop@2x.png 2x">
+        <source media="(min-width: 768px)" width="709" height="609" srcset="img/product-picture-tablet.png 1x, img/product-picture-tablet@2x.png 2x">
+        <img class="hero__product-picture" src="img/product-picture-mobile.png" width="280" height="270" srcset="img/product-picture-mobile@2x.png 2x" alt="Изображение нашего продукта.">
+      </picture>
       <a class="section-hero__button button-link--hero" href="form.html">Подобрать программу</a>
     </section>
     <section class="main__section main__section--programs section-programs">
       <h2 class="visually-hidden">Программы для похудения и набора массы.</h2>
-      <div class="banner-programs__item banner-program banner-program__item--tablet">
+      <div class="banner-programs__item banner-program banner-program--icon_sitting">
         <h3 class="section-title section-title--program">Похудение</h3>
         <p class="section-text--regular">Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.</p>
-        <a class="button-link-program" href="catalog.html">Каталог SLIM</a>
+        <a class="button-link-program section-programs__button" href="catalog.html">Каталог SLIM</a>
       </div>
-      <div class="banner-programs__item banner-program banner-program__item--tablet">
+      <div class="banner-programs__item banner-program banner-program--icon_going">
         <h3 class="section-title section-title--program">Набор массы</h3>
         <p class="section-text--regular">Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!</p>
-        <a class="button-link-program" href="catalog.html">Каталог PRO</a>
+        <a class="button-link-program section-programs__button" href="catalog.html">Каталог PRO</a>
       </div>
     </section>
     <section class="main__section section-advantages">
@@ -72,35 +80,41 @@
     <article class="main__section section-slider">
       <div class="annotation-slider">
         <h2 class="section__title section-title--slider">Живой пример</h2>
-        <p class="section-text--regular">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
+        <p class="section-text--slider">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
         <dl class="section-slider__list">
           <div class="slider__text">
             <dt class="slider__termin">5 кг</dt>
-            <dd class="slider__desc section-text--slider_desc">снижение<br>веса</dd>
+            <dd class="slider__desc section-text--slider_desc">снижение веса</dd>
           </div>
           <div class="slider__text">
             <dt class="slider__termin">60 дней</dt>
-            <dd class="slider__desc section-text--slider_desc">затрачено<br>времени</dd>
+            <dd class="slider__desc section-text--slider_desc">затрачено времени</dd>
           </div>
           <div class="section-text--slider_bottom">
             <dt class="slider__termin--bottom">15 000 руб.</dt>
-            <dd class="slider__desc--bottom">Затраты на питание:&nbsp</dd>
+            <dd class="slider__desc--bottom">Затраты на питание:&nbsp;</dd>
           </div>
         </dl>
       </div>
       <div class="section-slider__images-wrapper">
         <div>
           <div class="section-slider__front-image-wrapper">
-            <img class="slider__photo-fat" src="img/fat-cat-mobile.png" width="280" height="256" alt="Фото толстого кота.">
+            <picture>
+              <source media="(min-width: 768px)" width="560" height="512" srcset="img/fat-cat-tablet-desktop.png 1x, img/fat-cat-tablet-desktop@2x.png 2x">
+              <img class="slider__photo-fat" src="img/fat-cat-mobile.png" width="280" height="256" srcset="img/fat-cat-mobile@2x.png 2x" alt="Фото толстого кота.">
+            </picture>
           </div>
-          <img class="slider__photo-skinny" src="img/skinny-cat-mobile.png" width="280" height="256" alt="Фото худого кота.">
+          <picture>
+            <source media="(min-width: 768px)" width="560" height="512" srcset="img/skinny-cat-tablet-desktop.png 1x, img/skinny-cat-tablet-desktop@2x.png 2x">
+            <img class="slider__photo-skinny" src="img/skinny-cat-mobile.png" width="280" height="256" srcset="img/skinny-cat-mobile@2x.png 2x" alt="Фото худого кота.">
+          </picture>
         </div>
       </div>
     </article>
     <section class="section-address">
       <header class="section-address__header">
         <h2 class="section-address__title">Приглашаем<br>к&nbsp;сотрудничеству<br>дилеров!</h2>
-        <p class="section-text--regular">ул.&nbsp;Большая<br>Конюшенная,&nbsp;д.&nbsp;19/8<br>Санкт-Петербург</p>
+        <p class="section-text--address">ул.&nbsp;Большая<br>Конюшенная,&nbsp;д.&nbsp;19/8<br>Санкт-Петербург</p>
       </header>
       <iframe class="section-address__map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d16456.730870239666!2d30.32300859221838!3d59.93994119682937!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1691626493241!5m2!1sru!2sru" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </section>

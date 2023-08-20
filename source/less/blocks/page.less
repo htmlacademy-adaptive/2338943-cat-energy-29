@@ -10,6 +10,30 @@
     font-size: 14px;
     line-height: 18px;
   }
+
+  &__form {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: start;
+  }
+
+  &__form-data-cat {
+
+    @media (min-width: 768px) and (max-width: 1439px) {
+      width: 100%;
+    }
+
+    @media (min-width: 1440px) {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 80px;
+      border-color: transparent;
+      margin: 0;
+      padding: 0;
+      padding-bottom: 70px;
+      padding-top: 60px;
+    }
+  }
 }
 
 .page--background {
@@ -24,6 +48,12 @@
       content: "";
       z-index: -1;
       background: url("../img/hero-background-desktop.jpg") no-repeat;
+      background-size: 720px 694px;
+
+      @media (min-resolution: 2dppx) {
+        background: url("../img/hero-background-desktop@2x.jpg") no-repeat;
+        background-size: 720px 694px;
+      }
     }
   }
 }
