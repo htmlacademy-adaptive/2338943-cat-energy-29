@@ -36,6 +36,7 @@
 .page-header__logo {
   .grid-position(1 / 2, 1 / 2);
   display: block;
+  cursor: auto;
 
   @media (min-width: 768px) and (max-width: 1439px) {
     width: 60px;
@@ -46,25 +47,37 @@
     width: 70px;
     height: 59px;
   }
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .page-header__title {
-  color: #111111;
+  background-color: #111111;
+  width: 101px;
+  height: 18px;
+  mask: url('../img/stack.svg#title');
+  align-self: center;
+
   .grid-position(2 / 3, 1 / 2);
 
   @media (max-width: 767px) {
     margin: 0 auto;
-    padding: 10px;
   }
 
   @media (min-width: 768px) and (max-width: 1439px) {
-    padding: 16px 13px;
+    padding-left: 13px;
+    width: 114px;
   }
 
   @media (min-width: 1440px) {
-    padding: 19px 14px;
-    width: 118px;
-    height: 21px;
+    padding-left: 14px;
+    width: 115px;
   }
 }
 

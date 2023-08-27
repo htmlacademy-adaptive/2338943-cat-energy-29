@@ -120,9 +120,27 @@
   &-link-program {
     .button-style(link, transparent, #000000);
 
-    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
     padding-top: 15px;
-    text-align: left;
+
+    @media (max-width: 767px) {
+      width: 139px;
+      column-gap: 15px;
+      padding: 4px 9px 4px 0;
+    }
+    @media (min-width: 768px) and (max-width: 1439px) {
+      width: 165px;
+      column-gap: 25px;
+      padding: 4px 0;
+    }
+    @media (min-width: 1440px) {
+      width: 162px;
+      column-gap: 25px;
+      padding: 4px 0;
+    }
   }
 
   &-more {
