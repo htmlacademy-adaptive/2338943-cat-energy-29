@@ -12,14 +12,14 @@
 
   @media (min-width: 768px) and (max-width: 1439px) {
     padding-bottom: 101px;
-    background: linear-gradient(to top, @slider-gradient-color 462px, #ffffff 462px);
+    background: linear-gradient(to bottom, #ffffff 145px, @slider-gradient-color 145px);
   }
 
   @media (min-width: 1440px) {
     justify-content: space-between;
-    padding-top: 70px;
-    padding-bottom: 75px;
-    background: linear-gradient(to top, @slider-gradient-color 444px, #ffffff 444px);
+    padding-top: 0;
+    padding-bottom: 65px;
+    background: linear-gradient(to bottom, #ffffff 145px, @slider-gradient-color 145px);
   }
 }
 
@@ -37,6 +37,7 @@
 
   @media (min-width: 1440px) {
     padding-top: 20px;
+    row-gap: 31px;
   }
 }
 
@@ -51,13 +52,14 @@
 
   @media (min-width: 768px) {
     width: 162px;
-    padding: 15px 20px;
+    padding: 15px 20px 18px;
   }
 }
 
 .slider__termin {
   font-size: 24px;
   line-height: 24px;
+  text-transform: uppercase;
 
   @media (min-width: 768px) {
     font-size: 30px;
@@ -90,7 +92,7 @@
 
   @media (min-width: 768px) {
     width: 135px;
-    bottom: -8px;
+    bottom: -6px;
   }
 
   &--bottom {
@@ -108,11 +110,9 @@
 
 .section-slider__images-wrapper {
   position: relative;
-  // padding-top: 10px;
   margin-top: 10px;
 
   @media (min-width: 768px) and (max-width: 1439px) {
-    // padding-top: 99px;
     margin-top: 99px;
   }
 
@@ -129,7 +129,7 @@
   width: 40px;
   right: 50%;
   top: 50%;
-  transform: translate(50% + @front-img-wrapper-border-right, -50%);
+  transform: translate(50% + @front-img-wrapper-border-right, -65%);
   margin: 0;
   padding: 0;
   border: 0;
@@ -152,21 +152,27 @@
 
 .slider__photo-fat {
   display: block;
+  box-sizing: border-box;
   object-fit: cover;
+  transform: translateX(4px);
+
 
   @media (max-width: 767px) {
     background-color: @slider-gradient-color;
   }
 
-  @media (min-width: 768px) {
+  @media (min-width: 768px) and (max-width: 1439px) {
     background: linear-gradient(to bottom, #ffffff 0, #ffffff 29.5%, @slider-gradient-color 29.5%, @slider-gradient-color 100%);
+  }
+
+  @media (min-width: 1440px) {
+    background: linear-gradient(to bottom, #ffffff 135px, @slider-gradient-color 135px);
   }
 }
 
 .slider__photo-skinny {
-  display: block;
   position: absolute;
-  top: 10px;
+  top: 0;
   right: 0;
   z-index: 0;
 
