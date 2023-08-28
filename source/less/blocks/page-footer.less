@@ -48,6 +48,7 @@
   justify-content: center;
   gap: 24px;
   padding: 0;
+  margin: 20px auto;
   list-style: none;
  }
 
@@ -80,6 +81,7 @@
 }
 
 .page-footer__developer-link {
+  align-self: center;
   display: flex;
   justify-content: space-between;
   text-decoration: none;
@@ -88,6 +90,11 @@
   font-size: 16px;
   line-height: 32px;
   cursor: auto;
+  min-width: 168px;
+
+  @media (max-width: 767px) {
+    width: 100%;
+  }
 
   &:hover {
     color: #68b738;
