@@ -3,16 +3,17 @@
 .section-slider {
   display: flex;
   flex-wrap: wrap;
-  background-color: @slider-gradient-color;
+
 
   @media (max-width: 767px) {
     padding-top: 25px;
     padding-bottom: 40px;
+    background-color: @slider-gradient-color;
   }
 
   @media (min-width: 768px) and (max-width: 1439px) {
     padding-bottom: 101px;
-    background: linear-gradient(to bottom, #ffffff 145px, @slider-gradient-color 145px);
+    background: linear-gradient(to top, @slider-gradient-color 462px, #ffffff 462px);
   }
 
   @media (min-width: 1440px) {
@@ -179,9 +180,5 @@
   @media (max-width: 767px) {
     width: 280px;
     height: 256px;
-  }
-
-  @media (min-width: 768px) and (max-width: 1439px) {
-    // padding-top: 99px;
   }
 }
