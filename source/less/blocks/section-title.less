@@ -16,7 +16,6 @@
 
     @media (min-width: 768px) {
       .title-style();
-
     }
   }
 
@@ -27,10 +26,7 @@
       text-align: center;
       width: 280px;
 
-      padding-top: 7px;
-      padding-right: 0;
-      padding-bottom: 5px;
-      padding-left: 0;
+      padding: 7px 0 5px;
     }
 
     @media (min-width: 768px) and (max-width: 1439px) {
@@ -92,4 +88,40 @@
       padding-left: 0;
     }
   }
+
+  &--catalog {
+    @media (min-width: 768px) {
+      .title-style();
+      padding-top: 45px;
+      padding-bottom: 85px;
+    }
+  }
+
+  &--additional {
+    @media (min-width: 768px) and (max-width: 1439px) {
+      .title-style(36px, 36px);
+      margin: 0 -40px;
+      transform: translateY(-35px);
+      background-color: #ffffff;
+      padding: 0 40px 0;
+
+      width: max-content;
+      max-width: 50%;
+      word-break: break-all;
+    }
+
+    @media (min-width: 1440px) {
+      .title-style(36px, 36px);
+      margin: 0 -40px;
+      transform: translateY(-35px);
+      background-color: #ffffff;
+      padding: 0 40px 0;
+
+      width: max-content;
+      max-width: 50%;
+      word-break: break-all;
+    }
+
+  }
 }
+

@@ -3,6 +3,9 @@
   flex-wrap: wrap;
   width: 100%;
 
+  border: 0;
+  border-top: 3px solid #68B738;
+
   @media (max-width: 767px) {
     padding: 23px 20px 27px;
     margin: 0 -20px 0;
@@ -18,21 +21,19 @@
     margin: 0;
   }
 
-  border: 0;
-  border-top: 3px solid #68B738;
-
   &--data-cat {
     border: none;
     flex-direction: column;
     justify-content: space-between;
 
-
     @media (max-width: 767px) {
       gap: 14px;
     }
 
-    @media (min-width: 768px) {
+    @media (min-width: 768px) and (max-width: 1439px) {
       gap: 20px;
+      padding-top: 65px;
+      padding-bottom: 72px;
     }
 
     @media (min-width: 1440px) {
@@ -57,8 +58,10 @@
 
     @media (min-width: 768px) and (max-width: 1439px) {
       box-sizing: border-box;
-      gap: 23px;
+      gap: 18px;
       margin: 0;
+      padding-left: 26px;
+      padding-bottom: 103px;
     }
 
     @media (min-width: 1440px) {
@@ -75,6 +78,12 @@
   &--data-owner {
     justify-content: start;
 
+    @media (min-width: 768px) and (max-width: 1439px) {
+      gap: 20px;
+      padding-top: 71px;
+      padding-bottom: 70px;
+    }
+
     @media (min-width: 1440px) {
       display: grid;
       grid-template-columns: 570px 570px;
@@ -87,18 +96,12 @@
 
   }
 
-  &--additionally {
-    justify-content: space-between;
-
-    @media (min-width: 1440px) {
-      margin-left: -110px;
-      margin-right: -110px;
-      padding-top: 52px;
-      padding-bottom: 53px;
-    }
-  }
-
   &--comment {
+    @media (min-width: 768px) and (max-width: 1439px) {
+      padding-top: 82px;
+      padding-bottom: 88px;
+    }
+
     @media (min-width: 1440px) {
       margin-left: -110px;
       margin-right: -110px;
@@ -107,6 +110,24 @@
     }
   }
 
+  &--additionally {
+    justify-content: space-between;
+
+    @media (min-width: 768px) and (max-width: 1439px) {
+      padding-top: 53px;
+      padding-bottom: 45px;
+      justify-content: flex-start;
+      column-gap: 100px;
+      row-gap: 25px;
+    }
+
+    @media (min-width: 1440px) {
+      margin-left: -110px;
+      margin-right: -110px;
+      padding-top: 52px;
+      padding-bottom: 53px;
+    }
+  }
 }
 
 .form-fieldset__legend {

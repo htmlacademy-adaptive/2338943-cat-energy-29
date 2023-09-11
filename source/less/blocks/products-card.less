@@ -39,6 +39,10 @@
     margin-top: -81px;
     gap: 22px;
   }
+
+  @media (min-width: 1440px) {
+    gap: 0;
+  }
 }
 
 .products-card__picture {
@@ -72,7 +76,6 @@
 .products-card__title {
   margin: auto;
 
-
   @media (max-width: 767px) {
     width: 76px;
     margin-bottom: 14px;
@@ -81,8 +84,15 @@
 
   @media (min-width: 768px) {
     width: 140px;
-    .font-text(20px, uppercase)
+    .font-text(20px, uppercase);
+    padding-top: 6px;
   }
+}
+
+.products-card__disc {
+  font-family: Lato;
+  margin-top: 25px;
+  margin-bottom: 46px;
 }
 
 .products-card__disc-item {
@@ -96,5 +106,9 @@
 
   @media (min-width: 768px) {
     .font-text(16px, unset)
+  }
+
+  @media (min-width: 1440px) {
+    margin-bottom: 10px;
   }
 }
