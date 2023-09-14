@@ -1,65 +1,24 @@
-@font-face {
-  font-family: "Oswald";
-  font-style: normal;
-  font-weight: 400;
-  src: url("../fonts/oswald/oswaldregular.woff") format("woff2");
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Lato";
-  font-style: normal;
-  font-weight: 400;
-  src: url("../fonts/lato/Lato-Regular.woff") format("woff2");
-  font-display: swap;
-}
-
-.main__section {
-
-  @media (max-width: 767px) {
-    padding: 0 20px;
-  }
-
-  @media (min-width: 768px) and (max-width: 1439px) {
-    padding: 0 30px;
-  }
-
-  @media (min-width: 1440px) {
-    padding: 0 110px;
-    max-width: 1440px;
-    box-sizing: border-box;
-
-    &--programs {
-      margin: 83px 0 0;
-    }
-  }
-}
-
+@import "./blocks/fonts.less";
 @import "./blocks/page.less";
 @import "./blocks/button.less";
-@import "./blocks/section-title.less";
-@import "./blocks/section-text.less";
-
+@import "./blocks/title.less";
+@import "./blocks/text.less";
 @import "./blocks/page-header.less";
-@import "./blocks/section-hero.less";
-@import "./blocks/section-programs.less";
+@import "./blocks/hero.less";
+@import "./blocks/programs.less";
 @import "./blocks/banner-program.less";
-@import "./blocks/section-advantages.less";
-@import "./blocks/section-slider.less";
+@import "./blocks/advantages.less";
+@import "./blocks/slider.less";
 @import "./blocks/annotation-slider.less";
-
-@import "./blocks/section-address.less";
-@import "./blocks/section-products.less";
-@import "./blocks/products-list.less";
+@import "./blocks/address.less";
+@import "./blocks/products.less";
 @import "./blocks/products-card.less";
-@import "./blocks/section-additional-products.less";
+@import "./blocks/additional-products.less";
 @import "./blocks/additional-products-list.less";
 @import "./blocks/additional-products-card.less";
-
-@import "./blocks/section-form.less";
+@import "./blocks/form.less";
 @import "./blocks/form-fieldset.less";
 @import "./blocks/label-input.less";
-
 @import "./blocks/page-footer.less";
 
 .visually-hidden {

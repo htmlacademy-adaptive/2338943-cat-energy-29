@@ -3,61 +3,116 @@
   font-size: 16px;
   line-height: 24px;
   min-width: 320px;
-  max-width: 1440px;
-  margin: 0 auto;
+  margin: 0;
 
   @media (max-width: 767px) {
     font-size: 14px;
     line-height: 18px;
   }
 
-  &__form {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: flex-start;
-  }
-
-  &__form-data-cat {
-
-    @media (min-width: 768px) and (max-width: 1439px) {
-      width: 100%;
-    }
+  &--background {
 
     @media (min-width: 1440px) {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 80px;
-      border-color: transparent;
-      margin: 0;
-      padding: 0;
-      padding-bottom: 74px;
-      padding-top: 65px;
+      &::after {
+        position: absolute;
+        top: -0;
+        left: 50%;
+        height: 694px;
+        width: 50%;
+        content: "";
+        z-index: -1;
+        background:
+          linear-gradient(to right, rgba(105, 183, 56, 0.847) 0, #69b738d8 100%),
+          url("../img/background-desktop.jpg") no-repeat;
+        background-color: #2e501a;
+        background-size: 1040.87px 694px;
+        background-position: top right;
+
+        @media (min-resolution: 2dppx) {
+          background:
+            linear-gradient(to right, #69b738d8 0, #69b738d8 100%),
+            url("../img/background-desktop@2x.jpg") no-repeat;
+          background-size: 1040.87px 694px;
+        }
+      }
     }
   }
 }
 
-.page--background {
+.page__container {
+  box-sizing: border-box;
+
+  @media (max-width: 767px) {
+    padding: 0 20px;
+    min-width: 320px;
+    margin: 0 auto;
+  }
+
+  @media (min-width: 768px) and (max-width: 1439px) {
+    padding: 0 30px;
+    min-width: 768px;
+    margin: 0 auto;
+  }
 
   @media (min-width: 1440px) {
-    &::after {
-      position: absolute;
-      top: -0;
-      left: 50%;
-      height: 694px;
-      width: 720px;
-      content: "";
-      z-index: -1;
-      background:
-        url("../img/hero-background-desktop.jpg") no-repeat,
-        linear-gradient(to right, #68B738 0, #68B738 100%);
-      background-size: 720px 694px;
 
-      @media (min-resolution: 2dppx) {
-        background:
-          url("../img/hero-background-desktop@2x.jpg") no-repeat,
-          linear-gradient(to right, #68B738 0, #68B738 100%);
-        background-size: 720px 694px;
+    padding: 0 110px;
+
+    &--programs {
+      margin: 83px auto 0;
+    }
+
+    &--display-flex {
+      display: flex;
+      flex-wrap: wrap;
+
+      @media (max-width: 768px) {
+        flex-direction: column;
       }
     }
+  }
+
+  &--footer {
+    .footer-style(@padding, @flex-direction: row) {
+      display: flex;
+      box-sizing: border-box;
+      min-width: 320px;
+      justify-content: space-between;
+
+      padding: @padding;
+      flex-direction: @flex-direction;
+
+    }
+
+    @media (max-width: 767px) {
+      .footer-style(40px 20px, column);
+    }
+
+    @media (min-width: 768px) and (max-width: 1439px) {
+      .footer-style(55px 30px);
+    }
+
+    @media (min-width: 1440px) {
+      .footer-style(66px 110px 66px);
+    }
+  }
+}
+
+.page__form-data-cat {
+
+  @media (min-width: 768px) and (max-width: 1439px) {
+    padding-bottom: 89px;
+  }
+
+  @media (min-width: 1440px) {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 80px;
+    border-color: transparent;
+    width: 1440px;
+    margin: 0 auto;
+    padding: 0;
+    padding-bottom: 74px;
+    padding-top: 65px;
   }
 }

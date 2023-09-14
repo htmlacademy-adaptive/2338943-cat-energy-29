@@ -1,10 +1,12 @@
 @section-padding: 10px;
 
-.section-address {
+.address {
   position: relative;
+  // background-image: ;
+  background-color: @slider-gradient-color;
 }
 
-.section-address__header {
+.address__header {
   display: flex;
   justify-content: space-between;
   min-width: 280px;
@@ -32,7 +34,7 @@
   }
 }
 
-.section-address__title {
+.address__title {
   font-size: 16px;
   line-height: 20px;
   text-transform: uppercase;
@@ -46,11 +48,10 @@
   }
 }
 
-.section-address__map {
+.address__map {
   display: block;
   width: 100%;
   min-width: 320px;
-  max-width: 1440px;
   height: 362px;
 
   @media (min-width: 768px) {
