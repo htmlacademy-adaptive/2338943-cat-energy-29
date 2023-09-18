@@ -27,7 +27,8 @@
   .font-form();
   width: 100%;
   box-sizing: border-box;
-  height: 45px;
+  height: 52px;
+  text-transform: uppercase;
 
   padding: 14px 15px 13px;
   margin: 0;
@@ -42,7 +43,7 @@
   }
 
   @media (min-width: 768px) {
-    padding: 5px 0 0 60px;
+    padding: 10px 0 0 60px;
   }
 }
 
@@ -67,7 +68,7 @@
   border-radius: 50%;
 }
 
-.visually-hidden:hover + .input__radio-visually {
+.visually-hidden:checked + .input__radio-visually {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40' fill='none'%3E%3Ccircle cx='20' cy='20' r='19.5' stroke='%23CDCDCD'/%3E%3Ccircle cx='20' cy='20' r='9' fill='%2368B738'/%3E%3C/svg%3E");
   background-position: center;
   background-repeat: no-repeat;

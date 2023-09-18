@@ -1,4 +1,4 @@
-.section-title {
+.title {
   .title-style(@f-size: 60px, @l-height: 60px, @color: #000000) {
     font-size: @f-size;
     line-height: @l-height;
@@ -26,21 +26,19 @@
       text-align: center;
       width: 280px;
 
-      padding-top: 7px;
-      padding-right: 0;
-      padding-bottom: 5px;
-      padding-left: 0;
+      padding: 7px 0 5px;
     }
 
-    @media (min-width: 768px) {
+    @media (min-width: 768px) and (max-width: 1439px) {
       .title-style();
-      width: 414px;
-      padding: 30px 0;
+      width: 420px;
+      padding: 40px 0;
     }
 
     @media (min-width: 1440px) {
       .title-style();
-      padding-top: 81px;
+      width: 424px;
+      padding-top: 82px;
     }
   }
 
@@ -48,10 +46,11 @@
 
     @media (max-width: 767px) {
       .title-style(24px, 37px);
+      text-transform: uppercase;
       padding-top: 10px;
       padding-right: 0;
       padding-bottom: 19px;
-      padding-left: 71px;
+      padding-left: 70px;
     }
 
     @media (min-width: 768px) {
@@ -59,9 +58,8 @@
     }
 
     @media (min-width: 1440px) {
-      padding-top: 22px;
-      padding-left: 164px;
-      padding-bottom: 53px;
+      text-transform: uppercase;
+      padding: 37px 37px 37px 184px;
     }
   }
 
@@ -84,10 +82,44 @@
 
     @media (min-width: 1440px) {
       .title-style();
-      padding-top: 0;
+      padding-top: 10px;
       padding-right: 0;
       padding-bottom: 76px;
       padding-left: 0;
     }
   }
+
+  &--catalog {
+    @media (min-width: 768px) {
+      .title-style();
+      padding-top: 45px;
+      padding-bottom: 85px;
+    }
+  }
+
+  &--additional {
+    @media (min-width: 768px) and (max-width: 1439px) {
+      .title-style(36px, 36px);
+      transform: translateY(-35px);
+      background-color: #ffffff;
+      padding: 0 40px 0;
+
+      width: max-content;
+      max-width: 50%;
+      word-break: break-all;
+    }
+
+    @media (min-width: 1440px) {
+      .title-style(36px, 36px);
+      transform: translateY(-35px);
+      background-color: #ffffff;
+      padding: 0 40px 0;
+
+      width: max-content;
+      max-width: 50%;
+      word-break: break-all;
+    }
+
+  }
 }
+

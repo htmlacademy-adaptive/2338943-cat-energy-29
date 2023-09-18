@@ -1,17 +1,29 @@
-.section-additional-products {
+.additional-products {
+  position: relative;
+  border-top: 2px solid #68B738;
 
+  @media (min-width: 768px) and (max-width: 1439px) {
+    padding-top: 10px;
+    padding-left: 80px;
+    margin-left: -40px;
+  }
+
+  @media (min-width: 1440px) {
+    padding-bottom: 87px;
+  }
 }
 
-.section-additional-products__wrapper {
+.additional-products__wrapper {
   @media (min-width: 1440px) {
     display: flex;
     flex-wrap: wrap;
     align-items: stretch;
     justify-content: space-between;
+    padding-top: 44px;
   }
 }
 
-.section-additional-products__promo {
+.additional-products__promo {
   .promo-style(
     @width,
     @padding,
@@ -29,7 +41,7 @@
     line-height: @l-height;
     color: @color;
 
-    margin: 0 0 0 auto;
+    margin: 0;
     box-sizing: border-box;
     word-wrap: break-word;
   }
@@ -67,7 +79,7 @@
     background-size: cover;
   }
 
-  @media (min-width: 1440px) and (max-width: 1439px) and (min-resolution: 2dppx) {
+  @media (min-width: 1440px) and (min-resolution: 2dppx) {
     background: url("../img/promo-background-desktop@2x.jpg") no-repeat;
     background-color: #68B738;
     background-size: cover;
